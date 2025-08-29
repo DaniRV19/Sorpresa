@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ti ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="flex flex-col items-center text-center text-white">
+
+  <!-- Sección de bienvenida -->
+  <section class="h-screen flex flex-col justify-center items-center">
+    <h1 class="text-5xl font-bold mb-4 animate-bounce">✨ Para la mejor persona del mundo ✨</h1>
+    <p class="text-lg mb-6">Hecho con mucho amor, solo para ti 💖</p>
+    <button onclick="mostrarFrase()" class="bg-white text-pink-600 px-6 py-3 rounded-full shadow-lg hover:bg-pink-200 transition">💌 Dame una frase</button>
+    <p id="frase" class="mt-6 text-2xl font-semibold"></p>
+  </section>
+
+  <!-- Galería de fotos -->
+  <section class="py-12 bg-pink-100 w-full">
+    <h2 class="text-3xl font-bold text-pink-700 mb-8">📸 Nuestros recuerdos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+      <img src="images/Foto1.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="foto1">
+      <img src="images/Foto2.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="foto2">
+      <img src="images/Foto3.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="foto3">
+    </div>
+  </section>
+
+  <!-- Timeline de recuerdos -->
+  <section class="py-16 bg-gradient-to-r from-pink-200 via-pink-100 to-pink-200 w-full">
+    <h2 class="text-3xl font-bold text-pink-700 mb-12">⏳ Nuestra historia</h2>
+    <div class="relative border-l-4 border-pink-500 max-w-2xl mx-auto text-left px-6">
+      <div class="mb-10 ml-6">
+        <div class="absolute w-4 h-4 bg-pink-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold text-pink-700">💞 2011 - Cuando empezó todo</h3>
+        <p class="mt-2 text-gray-700">Ese día cambió mi vida para siempre...</p>
+      </div>
+      <div class="mb-10 ml-6">
+        <div class="absolute w-4 h-4 bg-pink-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold text-pink-700">🌹 06/2024 - Nuestra primera cita</h3>
+        <p class="mt-2 text-gray-700">Un día lleno de nervios y sonrisas.</p>
+      </div>
+      <div class="ml-6">
+        <div class="absolute w-4 h-4 bg-pink-500 rounded-full -left-2"></div>
+        <h3 class="text-xl font-semibold text-pink-700">✨ Hoy</h3>
+        <p class="mt-2 text-gray-700">Cada momento contigo es mi favorito ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cartas con mensajes -->
+  <section class="py-16 bg-pink-100 w-full">
+    <h2 class="text-3xl font-bold text-pink-700 mb-8">💌 Cartas para ti</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <!-- Carta 1 -->
+      <div class="carta w-64 h-40 mx-auto cursor-pointer" onclick="this.classList.toggle('abierta')">
+        <div class="contenido-carta relative w-full h-full text-black">
+          <div class="frente absolute inset-0 flex items-center justify-center bg-white rounded-xl shadow-lg text-pink-600 font-bold text-xl">💖 Ábreme</div>
+          <div class="detras absolute inset-0 flex items-center justify-center bg-pink-200 rounded-xl shadow-lg text-pink-800 font-semibold p-4">Eres mi razón de sonreír todos los días 💕</div>
+        </div>
+      </div>
+      <!-- Carta 2 -->
+      <div class="carta w-64 h-40 mx-auto cursor-pointer" onclick="this.classList.toggle('abierta')">
+        <div class="contenido-carta relative w-full h-full text-black">
+          <div class="frente absolute inset-0 flex items-center justify-center bg-white rounded-xl shadow-lg text-pink-600 font-bold text-xl">🌹 Ábreme</div>
+          <div class="detras absolute inset-0 flex items-center justify-center bg-pink-200 rounded-xl shadow-lg text-pink-800 font-semibold p-4">El mundo es mejor contigo a mi lado ✨</div>
+        </div>
+      </div>
+      <!-- Carta 3 -->
+      <div class="carta w-64 h-40 mx-auto cursor-pointer" onclick="this.classList.toggle('abierta')">
+        <div class="contenido-carta relative w-full h-full text-black">
+          <div class="frente absolute inset-0 flex items-center justify-center bg-white rounded-xl shadow-lg text-pink-600 font-bold text-xl">💎 Ábreme</div>
+          <div class="detras absolute inset-0 flex items-center justify-center bg-pink-200 rounded-xl shadow-lg text-pink-800 font-semibold p-4">Mi mayor tesoro siempre serás tú ❤️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carta escrita a mano (efecto typing) -->
+  <section class="py-16 bg-pink-200 w-full">
+    <h2 class="text-3xl font-bold text-pink-700 mb-8">✍️ Una carta para ti</h2>
+    <p id="cartaEscrita" class="max-w-2xl mx-auto text-2xl text-pink-900 font-semibold leading-relaxed"></p>
+    <button onclick="escribirCarta()" class="mt-6 bg-pink-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-pink-500 transition">📜 Leer carta</button>
+  </section>
+</body>
+</html>

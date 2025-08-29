@@ -1,0 +1,31 @@
+body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      overflow-x: hidden;
+    }
+    .corazon {
+      position: absolute;
+      color: red;
+      font-size: 24px;
+      animation: flotar 6s linear infinite;
+    }
+    @keyframes flotar {
+      from { transform: translateY(100vh); opacity: 1; }
+      to { transform: translateY(-10vh); opacity: 0; }
+    }
+    /* Animación cartas */
+    .carta {
+      perspective: 1000px;
+    }
+    .contenido-carta {
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+    .carta.abierta .contenido-carta {
+      transform: rotateY(180deg);
+    }
+    .frente, .detras {
+      backface-visibility: hidden;
+    }
+    .detras {
+      transform: rotateY(180deg);
+    }
